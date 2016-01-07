@@ -1,3 +1,9 @@
+//Questions:
+//2.  All of the numbers have static positions except for 1 and 10, which
+//    switch around occasionally.
+//3.  The length of the hash code is two times longer than the hashed string.
+//    The hash key always returns the same hash code.
+
 import java.util.*;
 
 public class Hashmap {
