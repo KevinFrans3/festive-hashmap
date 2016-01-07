@@ -18,11 +18,3 @@ public class Main {
 
 	}
 }
-
-
-
-
-
-//hashmaps
-//2.  11 and 12 are before 0-10 always
-//3.  the length of the hashmap is 2x longer than the hashed string
