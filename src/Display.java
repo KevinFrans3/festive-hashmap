@@ -68,9 +68,11 @@ public class Display extends JFrame{
 		int height = 300;
 		
 		
-		for(int i = 4; i < 24; i++)
+		for(int i = 4; i < 25; i++)
 		{
 			//System.out.println(counts[i]);
+			g.drawString(Integer.toString(i), xmargin + i*every + i*between, 400);
+			g.drawString(Integer.toString(counts[i]), xmargin + i*every + i*between, 200);
 			g.drawRect(xmargin + i*every + i*between, ymargin + 300 - counts[i], every,counts[i]);
 			
 			
