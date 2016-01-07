@@ -15,8 +15,8 @@ public class Display extends JFrame{
 	
 	public void histogram()
 	{
-		this.setSize(750, 400);
-        this.setTitle("An Empty Frame");
+		this.setSize(1000, 420);
+        this.setTitle("Histogram of Legends");
         
         
         
@@ -44,8 +44,8 @@ public class Display extends JFrame{
         		hm.put(key,hm.get(key) + 1);
         	}
         }
-        System.out.println(hm.values());
-        System.out.println(hm.keySet());
+        //System.out.println(hm.values());
+        //System.out.println(hm.keySet());
 	}
 	
 	public void paint(Graphics g) 
@@ -68,9 +68,9 @@ public class Display extends JFrame{
 		int height = 300;
 		
 		
-		for(int i = 0; i < 24; i++)
+		for(int i = 4; i < 24; i++)
 		{
-			System.out.println(counts[i]);
+			//System.out.println(counts[i]);
 			g.drawRect(xmargin + i*every + i*between, ymargin + 300 - counts[i], every,counts[i]);
 			
 			
