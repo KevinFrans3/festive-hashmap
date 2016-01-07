@@ -15,7 +15,7 @@ public class Display extends JFrame{
 	
 	public void histogram()
 	{
-		this.setSize(700, 400);
+		this.setSize(750, 400);
         this.setTitle("An Empty Frame");
         
         
@@ -45,14 +45,39 @@ public class Display extends JFrame{
         	}
         }
         System.out.println(hm.values());
+        System.out.println(hm.keySet());
 	}
 	
 	public void paint(Graphics g) 
     {
+		int counts[] = new int[25];
+		
+		for(int i = 0; i < hm.values().size(); i++)
+		{
+			counts[i] = 0;
+			if(hm.keySet().contains(Integer.toString(i)))
+			{
+				counts[i] = hm.get(Integer.toString(i));
+			}
+		}
+		
 		int xmargin = 100;
 		int ymargin = 50;
-		int every = 100;
+		int every = 20;
+		int between = 10;
 		int height = 300;
+		
+		
+		for(int i = 0; i < 24; i++)
+		{
+			System.out.println(counts[i]);
+			g.drawRect(xmargin + i*every + i*between, ymargin + 300 - counts[i], every,counts[i]);
+			
+			
+		}
+		
+		
+		
 		
 		
     }
